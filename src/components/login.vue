@@ -37,7 +37,7 @@ export default {
             });
           })
           .catch(err => {
-            this.errorMessage = '登录失败: ' + (err.response?.data?.message || '未知错误');
+            this.errorMessage = '登录失败: ' + (err.response?.data?.message || '请检查账号密码');
           });
     }
   }
