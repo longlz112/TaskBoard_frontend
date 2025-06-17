@@ -6,6 +6,12 @@
       <p><strong>用户名:</strong> {{ user.username }}</p>
       <p><strong>邮箱:</strong> {{ user.email }}</p>
     </div>
+    <router-link to="/admin">
+      <div v-if="user.roles.includes('ROLE_ADMIN')" class="to_dashbroad">
+        <button class="view-details-button">管理界面</button>
+      </div>
+    </router-link>
+
 
     <!-- 创建任务区域 -->
     <div v-if="user.roles.includes('ROLE_MODERATOR') || user.roles.includes('ROLE_ADMIN')" class="create-task-section">
@@ -54,7 +60,6 @@
         </div>
       </div>
     </div>
-
     <!-- 任务展示区域 -->
     <div class="user-tasks">
       <h3>我的任务记录</h3>

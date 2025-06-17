@@ -7,6 +7,7 @@ import profile from "@/components/profile.vue";
 import Tasks from "@/components/Tasks.vue";
 import TaskDetail from "@/components/TaskDetail.vue";
 import TaskSearch from "@/components/TaskSearch.vue";
+import admin from "@/components/admin.vue";
 
 const routes = [
     {
@@ -47,6 +48,12 @@ const routes = [
         path: '/search',
         name: 'TaskSearch',
         component: TaskSearch,
+        meta: { requiresAuth: true }  // 添加认证标记
+    },
+    {
+        path: '/admin',
+        name: 'admin',
+        component: admin,
         meta: { requiresAuth: true }  // 添加认证标记
     },
     // 其他路由...

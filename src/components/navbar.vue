@@ -284,7 +284,7 @@ export default {
         this.closeMobileMenu();
 
         // 如果当前在需要登录的页面，则重定向到首页
-        const protectedRoutes = ['/tasks', '/search', '/profile'];
+        const protectedRoutes = ['/tasks', '/search', '/profile','/admin'];
         if (protectedRoutes.includes(this.$route.path)) {
           await this.$router.push('/');
         }
