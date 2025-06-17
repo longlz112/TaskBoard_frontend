@@ -1,4 +1,5 @@
 // store/index.js
+//暂时无用
 import { createStore } from 'vuex';
 import AuthService from "@/services/AuthService"; // 引入 AuthService
 

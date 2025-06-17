@@ -289,8 +289,6 @@ export default {
           await this.$router.push('/');
         }
 
-        // 显示退出成功提示
-        this.$toast?.success?.('已成功退出登录');
       } catch (error) {
         console.error('退出登录失败:', error);
         this.$toast?.error?.('退出登录失败，请重试');
